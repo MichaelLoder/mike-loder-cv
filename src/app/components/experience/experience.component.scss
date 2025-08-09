@@ -1,0 +1,39 @@
+h2 {
+    margin: 0;
+     margin-bottom: 20px;
+    border-bottom: 2px solid rgb(142, 142, 142);
+}
+
+h3, h4 {
+    margin: 0;
+}
+
+.isSelected {
+    color: green;
+    font-weight: bold;
+}
+
+.experience__item__title{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 4px;
+}
+
+.experience__item__date{
+    align-content: center;
+     color: rgb(145, 145, 145);
+}
+
+.experience__item__company{
+    color: rgb(13, 138, 149);
+}
+.experience__item__container{
+    border-bottom: 1px dashed rgb(142, 142, 142);
+}
+
+.experience__container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

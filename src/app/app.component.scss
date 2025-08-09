@@ -1,0 +1,43 @@
+
+
+
+:host{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 20px;
+    flex: 2;
+    color: rgb(62, 62, 62);
+}
+
+.cv-main {
+    width: 100%;
+    flex: 2
+}
+
+.cv-sidemenu {
+    height: 100%;
+    border: 1px solid black;
+    background-color: rgba(3, 37, 91, 0.681);
+    color: white;
+    width: 100%;
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column
+}
+
+.profile__image__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile__image{
+    border-radius: 50%;
+    height: 100px;
+}
+

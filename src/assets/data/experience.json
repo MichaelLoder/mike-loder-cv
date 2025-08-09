@@ -1,0 +1,108 @@
+[
+  {
+    "title": "Senior Software Engineer",
+    "company": "Domestic and General",
+    "date": "September 2022 — Present, London",
+    "description": "I led the uplift of our customer-facing portal written in V16 Angular, significantly improving both its design and code quality. I enhanced unit test coverage to over 90% per feature by leveraging NgRx and adhering to best practices for state management. <br><br> I actively participated in refinement meetings to help ensure an optimal customer experience, working with stakeholders to determine what the best approach is and how to implement it in a way that is both effective and efficient. <br><br> I also participated in the migration of our infrastructure from Python scripts to AWS CDK quickly mastering CDK within just three weeks and successfully developed complex stacks and integrated Edge Lambda functions, all without formal training.",
+    "skillUsed": [
+      "Angular",
+      "RxJS",
+      "NgRx",
+      "AWS",
+      "Typescript",
+      "Javascript",
+      "NodeJs",
+      "Jasmine",
+      "Jest",
+      "Cypress",
+      "CDK",
+      "Mentoring",
+      "SCSS"
+    ]
+  },
+  {
+    "title": "Senior Software Developer",
+    "company": "Menzies Distribution",
+    "date": "December 2021 — September 2022",
+    "description": "I developed and maintained a package distribution system written in C# MVC, working closely with stakeholders to translate business needs into effective technical solutions. <br><br> I delivered new features and bug fixes in a timely and efficient manner, and collaborated with cross-functional teams to ensure high-quality solutions were implemented throughout the system.",
+    "skillUsed": [
+      "C#",
+      "SQL",
+      "Javascript",
+      "MVC",
+      "Jenkins",
+      "XUnit",
+      "NUnit",
+      "SCSS"
+    ]
+  },
+  {
+    "title": "Senior Software Developer",
+    "company": "LMS",
+    "date": "June 2021 — December 2021",
+    "description": "I contributed to version 2 of LMS’s product, which utilized a .NET Core 3.1 backend and Vue 2 frontend. I worked closely with my team to ensure quality control through source control pull requests and the timely delivery of tasks. <br><br> I played a key role in continuous improvement, ensuring that project estimates were met and high standards of quality were maintained.",
+    "skillUsed": [
+      "C#",
+      "SQL",
+      "Javascript",
+      "MVC",
+      "Jenkins",
+      "XUnit",
+      "NUnit",
+      "Vue.js",
+      "Azure",
+      ".NET Core",
+      "SCSS"
+    ]
+  },
+  {
+    "title": "Senior Software Developer",
+    "company": "Vitality",
+    "date": "June 2019 — June 2021",
+    "description": "I joined Vitality in June 2019 to develop back-end systems for the claims department. When a new project began and the team lacked a front-end developer, I volunteered to step in, as I was the only member with the necessary experience. I became the primary contributor for all front-end development while continuing to work on back-end systems whenever there were no front-end stories in the sprint. As the project progressed, I trained other back-end developers to build Angular components. <br><br> I was also the first in the company to implement the PKCE OAuth flow with the WSO2 Identity Server, overcoming significant technical challenges. To maintain an active SSO session, I devised a strategy to pass users through the authentication flow upon token expiry instead of using a refresh token, as there was no viable method at the time to keep a session alive. <br><br>The project operated outside the Sitecore instance, so I built the first proof of concept for consuming content via the Sitecore GraphQL endpoint. This was later adopted by another team for refinement and led to multiple projects consuming Sitecore in a headless mode.During my time with the company, I also completed a Sitecore development course and earned certification in Sitecore 9.1.",
+    "skillUsed": [
+      "Angular",
+      "C#",
+      "RxJS",
+      "Javascript",
+      "Typescript",
+      "Jenkins",
+      "GraphQL",
+      "Sitecore",
+      "Mentoring"
+    ]
+  },
+  {
+    "title": "Senior .Net Developer",
+    "company": "Home Emergency Assist",
+    "date": "March 2019 — June 2019",
+    "description": "I enhanced a policy administration system built on Angular 5 and .NET Core. I led the integration of Barclays and direct debit payments into the system, significantly improving its functionality. I implemented performance improvements, including caching and optimizing PDF generation. <br><br> During my time here i also helped with inhancing their wordpress platform with new features using PHP.",
+    "skillUsed": [
+      "Angular",
+      ".NET Core",
+      "Typescript",
+      "Javascript",
+      "SQL",
+      "Jasmine",
+      "Jest",
+      "Cypress",
+      "C#"
+    ]
+  },
+  {
+    "title": "Senior Developer",
+    "company": "Ageas",
+    "date": "June 2016 — February 2019",
+    "description": "During my time at Ageas, I assumed a range of senior responsibilities, from developing the company’s Quote & Buy product to automating SQL bulk data inserts. <br> Early in my career there, I worked on the Prism WPF application, a wrapper around a third-party product used by call centre agents, which I enhanced by injecting custom logic into the front end. Over time, this evolved into integrating full React applications into the wrapper, significantly extending the product’s capabilities.",
+    "skillUsed": [
+      "Angular",
+      "React",
+      ".NET Core",
+      "Typescript",
+      "Javascript",
+      "SQL",
+      "Jest",
+      "C#"
+    ]
+  }
+]

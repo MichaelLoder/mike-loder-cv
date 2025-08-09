@@ -1,0 +1,34 @@
+h1 {
+    margin: 0;
+}
+
+h2 {
+    color: rgb(13, 138, 149);
+}
+
+.about-me__icon {
+    color: rgb(202, 202, 202);
+}
+
+.about-me__container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.about-me__section{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.about-me__content {
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+}
+
+.about-me__download{
+    cursor: pointer;
+    color: rgb(13, 138, 149);
+}

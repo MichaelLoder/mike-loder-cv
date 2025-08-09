@@ -1,0 +1,8 @@
+<h2>SKILLS</h2>
+<div class="skills__container">
+  @for (skill of vm.skills(); track skill; ) {
+  <label [class.isSelected]="isSelected(skill)" (click)="clickSkill(skill)">
+    {{ skill }}
+  </label>
+  }
+</div>

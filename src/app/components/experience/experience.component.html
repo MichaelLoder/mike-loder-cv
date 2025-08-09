@@ -1,0 +1,25 @@
+<div class="experience__container">
+  <h2>EXPERIENCE</h2>
+  @for( exp of myExperience; track exp.company; ) {
+  <div class="experience__item__container">
+    <div class="experience__item__title">
+      <h3>{{ exp.title }}</h3>
+      <span class="experience__item__date">
+        <i class="fa-solid fa-calendar"></i> {{ exp.date }}</span
+      >
+    </div>
+
+    <h4 class="experience__item__company">{{ exp.company }}</h4>
+    <p [innerHTML]="exp.description"></p>
+    <p>
+      <strong>Skills:</strong>
+      <span
+        *ngFor="let skill of exp.skillUsed"
+        [class.isSelected]="isSelected(skill)"
+      >
+        {{ skill }}
+      </span>
+    </p>
+  </div>
+  }
+</div>
