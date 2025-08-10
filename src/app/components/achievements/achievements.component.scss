@@ -1,24 +1,24 @@
-.achievements__container{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.achievements__container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.achievements__title{
-border-bottom: 2px solid white;
-width: 100%;
+.achievements__title {
+  border-bottom: 2px solid white;
+  width: 100%;
 }
 
-.achievements__content__item__title{
-    display: flex;
-    flex-direction: row;
-    align-content: center;
-    align-items: baseline;
-    gap: 5px;
-    text-align: left;
-    border-bottom: 1px solid white;
+.achievements__content__item__title {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: baseline;
+  gap: 5px;
+  text-align: left;
+  border-bottom: 1px solid white;
 }
 
 h4 {
-    margin: 0;
+  margin: 0;
 }

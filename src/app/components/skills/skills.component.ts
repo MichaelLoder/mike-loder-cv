@@ -37,7 +37,7 @@ export class SkillsComponent {
       this.vm.selectedSkills.set([...this.vm.selectedSkills(), skill]);
     } else {
       this.vm.selectedSkills.set(
-        this.vm.selectedSkills().filter((s) => s !== skill)
+        this.vm.selectedSkills().filter((s) => s !== skill),
       );
     }
   }

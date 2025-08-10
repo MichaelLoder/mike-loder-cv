@@ -35,6 +35,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/mike-loder-cv/",
               "budgets": [
                 {
                   "type": "initial",

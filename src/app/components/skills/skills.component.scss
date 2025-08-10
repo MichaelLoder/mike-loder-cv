@@ -1,28 +1,32 @@
 h2 {
-    margin: 0;
-     margin-bottom: 20px;
-    border-bottom: 2px solid rgb(142, 142, 142);
-}
-.skills__container{
-   
-    display: flex;
-    background-color: rgba(0, 40, 105, 0.681);
-    min-height: 100px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 20px;
-    gap: 5px;
-}
-label {
-    padding: 5px;
-    background-color: white;
-    border: 1px solid black;
-    border-radius: 4px;
-    height: fit-content;
-    color: rgba(3, 37, 91, 0.681);
+  margin: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgb(142, 142, 142);
 }
 
-.isSelected{
-     color: white;
-     background-color: rgba(3, 37, 91, 0.681);
+h4 {
+  color: rgb(145, 145, 145);
+  margin: 0;
+}
+.skills__container {
+  display: flex;
+  background-color: rgba(0, 40, 105, 0.681);
+  min-height: 100px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 5px;
+}
+label {
+  padding: 5px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 4px;
+  height: fit-content;
+  color: rgba(3, 37, 91, 0.681);
+}
+
+.isSelected {
+  color: white;
+  background-color: rgba(3, 37, 91, 0.681);
 }

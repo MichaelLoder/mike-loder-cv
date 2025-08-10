@@ -1,12 +1,14 @@
-<app-card id="cv">
-  <section class="cv-main" card-main>
-    <router-outlet />
-  </section>
-  <section class="cv-sidemenu">
-    <div class="profile__image__container">
-      <img class="profile__image" src="assets/images/mike-loder.png" />
-    </div>
-    <app-strengths></app-strengths>
-    <app-achievements></app-achievements>
-  </section>
+<app-card id="cv" class="card">
+  <main>
+    <section class="cv-main" card-main>
+      <router-outlet />
+    </section>
+    <section class="cv-sidemenu">
+      <div class="profile__image__container">
+        <img class="profile__image" src="assets/images/mike-loder.png" />
+      </div>
+      <app-strengths></app-strengths>
+      <app-achievements></app-achievements>
+    </section>
+  </main>
 </app-card>

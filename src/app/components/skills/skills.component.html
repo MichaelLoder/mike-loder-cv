@@ -1,8 +1,9 @@
 <h2>SKILLS</h2>
+<h4>click to filter experience</h4>
 <div class="skills__container">
-  @for (skill of vm.skills(); track skill; ) {
-  <label [class.isSelected]="isSelected(skill)" (click)="clickSkill(skill)">
-    {{ skill }}
-  </label>
+  @for (skill of vm.skills(); track skill) {
+    <label [class.isSelected]="isSelected(skill)" (click)="clickSkill(skill)">
+      {{ skill }}
+    </label>
   }
 </div>

@@ -31,8 +31,8 @@ export class ExperienceComponent {
         .experience()
         .filter((e) =>
           e.skillUsed.some((s) =>
-            this.skillService.vm().selectedSkills().includes(s)
-          )
+            this.skillService.vm().selectedSkills().includes(s),
+          ),
         ),
       fullExperience: this.skillService.vm().experience(),
     };
