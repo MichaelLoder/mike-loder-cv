@@ -1,0 +1,20 @@
+<!-- full-screen-loader.component.html -->
+<div
+  *ngIf="visible$ | async"
+  class="loader-overlay"
+  role="status"
+  aria-live="polite"
+  aria-label="Loading"
+>
+  <div class="loader-box">
+    <svg
+      class="spinner"
+      viewBox="0 0 50 50"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <circle cx="25" cy="25" r="20"></circle>
+    </svg>
+    <div class="loader-text">Loading…</div>
+  </div>
+</div>

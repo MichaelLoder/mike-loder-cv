@@ -1,28 +1,49 @@
+import { computed, inject, Injectable, signal } from '@angular/core';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
+import { LoaderService } from './spinner.service';
 
+@Injectable({ providedIn: 'root' })
 export class PDFDownloadService {
+  private loaderService = inject(LoaderService);
+
+  isPdf = signal(false);
+
+  private viewModel = computed(() => {
+    return {
+      isPdf: this.isPdf,
+    };
+  });
+
   downloadPDF() {
     const DATA = document.getElementById('cv') as HTMLElement;
 
-    html2canvas(DATA, { scale: 2 }).then((canvas) => {
-      const imgData = canvas.toDataURL('image/png');
+    html2canvas(DATA, { scale: 1.5 }) // ↓ lower scale from 2 → 1.5
+      .then((canvas) => {
+        // Convert canvas to JPEG with compression
+        const imgData = canvas.toDataURL('image/jpeg', 0.75); // JPEG at 75% quality
 
-      // Convert pixel dimensions to mm (1 px = 0.264583 mm approx)
-      const pxToMm = 0.264583;
-      const imgWidth = canvas.width * pxToMm;
-      const imgHeight = canvas.height * pxToMm;
+        // PDF A4 width in mm
+        const pdfWidth = 210;
 
-      // Create PDF with custom page size to fit the image exactly
-      const pdf = new jsPDF({
-        unit: 'mm',
-        format: [imgWidth, imgHeight],
+        // Convert px → mm
+        const pxToMm = 0.264583;
+        const imgWidth = canvas.width * pxToMm;
+        const imgHeight = canvas.height * pxToMm;
+
+        // Scale height proportionally to fit A4 width
+        const scaleFactor = pdfWidth / imgWidth;
+        const scaledHeight = imgHeight * scaleFactor;
+
+        // Create PDF with custom height
+        const pdf = new jsPDF('p', 'mm', [pdfWidth, scaledHeight]);
+
+        // Add the image as JPEG instead of PNG
+        pdf.addImage(imgData, 'JPEG', 0, 0, pdfWidth, scaledHeight);
+
+        pdf.save('mike-loder-cv.pdf');
+        this.isPdf.set(false);
+        this.loaderService.hide();
       });
-
-      // Add image at 0,0 with original pixel size converted to mm
-      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-
-      pdf.save('full-size-content.pdf');
-    });
   }
 }

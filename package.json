@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "format": "prettier --write \"src/**/*.{ts,html,scss,css,json,md}\""
+    "format": "prettier --write \"src/**/*.{ts,html,scss,css,json,md}\"",
+    "deploy-ghpage": "ng build --configuration production && npx angular-cli-ghpages --dir=dist/mike-loder-cv/browser"
   },
   "private": true,
   "dependencies": {

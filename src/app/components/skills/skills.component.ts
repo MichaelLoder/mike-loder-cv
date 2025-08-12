@@ -7,6 +7,7 @@ import {
   WritableSignal,
 } from '@angular/core';
 import { SkillsService } from '../../services/skills.service';
+import { PDFDownloadService } from '../../services/pdf';
 
 @Component({
   selector: 'app-skills',
@@ -16,11 +17,13 @@ import { SkillsService } from '../../services/skills.service';
 })
 export class SkillsComponent {
   skillService = inject(SkillsService);
+  pdfService = inject(PDFDownloadService);
 
   private viewModel = computed(() => {
     return {
       skills: this.skillService.vm().skills,
       selectedSkills: this.skillService.vm().selectedSkills,
+      isPdf: this.pdfService.isPdf,
     };
   });
 

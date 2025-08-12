@@ -13,21 +13,21 @@
   <section class="about-me__section">
     <div class="about-me__content">
       <i class="fa-solid fa-globe about-me__icon"></i>
-      <span
-        ><a href="https://mike-loder.com" target="_blank"
-          >https://mike-loder.com</a
-        ></span
-      >
+      <span>https://mike-loder.co.uk</span>
     </div>
     <div class="about-me__content">
       <i class="fa-solid fa-location-pin about-me__icon"></i>
       <span>Bournemouth</span>
     </div>
   </section>
-  <section>
-    <div class="about-me__content">
-      <i class="fa-solid fa-download"></i>
-      <span (click)="onDownload()" class="about-me__download">Download</span>
-    </div>
-  </section>
+  @if (!vm.isPdf()) {
+    <section>
+      <div class="about-me__content">
+        <i class="fa-solid fa-download"></i>
+        <span (click)="onDownload()" class="about-me__download"
+          >Download CV</span
+        >
+      </div>
+    </section>
+  }
 </div>
