@@ -1,6 +1,7 @@
 import { Component, computed, inject } from '@angular/core';
 import { PDFDownloadService } from '../../services/pdf';
 import { LoaderService } from '../../services/spinner.service';
+import { GoogleTagManagerService } from 'angular-google-tag-manager';
 
 @Component({
   selector: 'app-about-me',
@@ -12,6 +13,7 @@ import { LoaderService } from '../../services/spinner.service';
 export class AboutMeComponent {
   private pdfDownloader = inject(PDFDownloadService);
   private loaderService = inject(LoaderService);
+  gtmService = inject(GoogleTagManagerService);
 
   private viewModel = computed(() => {
     return {
@@ -24,6 +26,10 @@ export class AboutMeComponent {
   }
 
   onDownload() {
+    this.gtmService.pushTag({
+      event: 'cv-download',
+      pageName: 'mike-loder-cv',
+    });
     this.loaderService.show();
     this.pdfDownloader.isPdf.set(true);
     setTimeout(() => {

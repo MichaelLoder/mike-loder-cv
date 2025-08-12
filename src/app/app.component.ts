@@ -15,6 +15,10 @@ import { PDFDownloadService } from './services/pdf';
 import { LoaderService } from './services/spinner.service';
 import { FullScreenLoaderComponent } from './components/spinner/spinner.component';
 import { CommonModule } from '@angular/common';
+import {
+  GoogleTagManagerModule,
+  GoogleTagManagerService,
+} from 'angular-google-tag-manager';
 
 @Component({
   selector: 'app-root',
@@ -30,7 +34,14 @@ import { CommonModule } from '@angular/common';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  gtmService = inject(GoogleTagManagerService);
+  ngOnInit(): void {
+    this.gtmService.pushTag({
+      event: 'page',
+      pageName: 'mike-loder-cv',
+    });
+  }
   title = 'mike-loder-cv';
   pdfService = inject(PDFDownloadService);
 }
